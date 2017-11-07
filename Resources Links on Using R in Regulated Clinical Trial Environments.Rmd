@@ -150,6 +150,10 @@ http://www.phusewiki.org/docs/RedwoodCitySDE/Operation_ValidateRMatthewDavis.pdf
 
 ## Shiny
 
+http://www.mbswonline.com/upload/presentation_5-23-2016-13-1-14.mbsw%20slides%20man%202016%20final.pdf
+
+https://cran.r-project.org/web/packages/BEACH/BEACH.pdf
+
 https://www.user2017.brussels/uploads/useR_2017_posterV2.pdf
 
 http://onlinelibrary.wiley.com/doi/10.1002/psp4.12052/full
