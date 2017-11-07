@@ -73,6 +73,14 @@ https://bookdown.org/yihui/bookdown/
 
 https://github.com/philbowsher/Job-Scheduling-R-Markdown-Reports-via-R
 
+https://rviews.rstudio.com/2017/06/28/printing-from-flex-dashboard/
+
+https://yihui.name/knitr/demo/vignette/
+
+https://github.com/rstudio/rticles
+
+http://rmarkdown.rstudio.com/developer_document_templates.html
+
 Virtual machines and docker containers can be used to
 freeze a particular build of software
 
@@ -367,6 +375,22 @@ https://4dpiecharts.com/2015/07/03/the-state-of-assertions-in-r/
 
 ## Reports & Tables
 
+There are several packages that can be used to make very nice packages:
+
+printr
+xtable
+stargazer
+tables
+pander
+
+pander::pandoc.table()
+
+http://rmarkdown.rstudio.com/rtf_document_format.html
+
+https://github.com/ns-ctru/ctru/blob/b3b30bd128af9546fa2aa1750b2a7f100f6d6fcd/vignettes/ctru-r-functions.Rmd
+
+https://github.com/dpastoor/nonmem/tree/master/ACCP1
+
 https://github.com/DanniYuGithub/RTF2/
 
 https://cran.r-project.org/web/packages/ReporteRs/index.html
@@ -462,6 +486,24 @@ http://biostat.mc.vanderbilt.edu/wiki/pub/Main/FHHandouts/dmcreport.pdf
 http://www.cse.unsw.edu.au/~mike/myrlibrary.old/RColorBrewer/html/ColorBrewer.html
 
 http://rmarkdown.rstudio.com/developer_document_templates.html
+
+https://github.com/ernstae/sysforpopkinetics/blob/15f09eaeefb091f3966adab9a5171f7d2b7cd3a7/r2/spk/cspk/ml/omh/Alpha.omh
+
+https://github.com/ronkeizer/pirana_docs/blob/1e2932f3f7a443b929de77c74b19a34116d028e0/manual_body.tex
+
+Plots
+
+diagrammeR Creation of network diagrams
+ggplot2 Easily create nice graphics
+lattice Alternative to ggplot2
+ggvis Interactive ggplot2
+plot.ly Another interactive ggplot2
+ggpairs Correlation matrices that look like ggplot2
+gridExtra Useful functions for ggplot2 and lattice
+latticeExtra Nice ggplot2like() function
+xpose4 Diagnostic plots for NONMEM
+
+https://uupharmacometrics.github.io/xpose/articles/cheatsheet.pdf
 
 ## Media
 
