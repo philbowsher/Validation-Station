@@ -1,0 +1,519 @@
+---
+title: "Resources Links on Using R in Regulated Clinical Trial Environments"
+output: 
+  html_document: 
+    highlight: textmate
+    toc: yes
+    toc_float: 
+      collapsed: no
+    theme: cosmo
+---
+
+## Introduction
+
+Below is a list of resources on using R in regulated clinical trial environments...Below some of the links is a comment or note that I thought was interesting...Feel free to send me any I may have missed.
+
+https://www.r-project.org/doc/R-FDA.pdf
+
+"The tests are located in the “tests” sub-directory of the extracted source code tarball. A README file is also available in that directory to describe the procedures to run the tests and various options related to selecting all tests or only a subset of the tests to run. The source code and expected results for these tests are available for review and use in other applications as may be appropriate.""
+
+Here is an example:
+
+https://github.com/tidyverse/ggplot2/tree/master/tests
+
+Other unit tests can be executed and are usually determined by the package requirements and in the risk assessment.
+
+Some orgs develop a test framework in which each R package in the installation is associated with a test or “validation” package containing additional tests.
+
+These package tests are usually written using the “testthat” framework for R package testing. Here is an example:
+
+https://github.com/rOpenHealth/openfda/tree/master/tests/testthat
+
+https://github.com/hadley/testthat
+
+## Landscape of Architecture
+
+Git/Github/Gitlab
+
+https://peerj.com/preprints/3159.pdf
+
+http://happygitwithr.com/
+
+https://github.com/tidyverse/reprex
+
+Travis CI...to run your tests whenever code is updated in a controlled
+environment, compute code coverage
+
+https://juliasilge.com/blog/beginners-guide-to-travis/
+
+testthat package
+
+http://kbroman.org/pkg_primer/pages/tests.html
+
+testthat: Get Started with Testing
+
+http://rjournal.github.io/archive/2011-1/RJournal_2011-1.pdf
+
+http://r-pkgs.had.co.nz/tests.html
+
+Testing Shiny
+
+https://rstudio.github.io/shinytest/articles/shinytest.html
+
+https://rstudio.github.io/shinyloadtest/
+
+Validation document via R Markdown - easily updated or
+even run nightly
+
+http://rmarkdown.rstudio.com/gallery.html
+
+http://rmarkdown.rstudio.com/lesson-1.html
+
+https://bookdown.org/yihui/bookdown/
+
+https://github.com/philbowsher/Job-Scheduling-R-Markdown-Reports-via-R
+
+Virtual machines and docker containers can be used to
+freeze a particular build of software
+
+http://dirk.eddelbuettel.com/blog/2014/10/23/
+
+https://github.com/philbowsher/Boston-Rocker
+
+https://hub.docker.com/r/rocker/
+
+"With a syntax that is simpler than other provisioning tools
+(e.g. Chef, Puppet, Ansible) or Continuous Integration (CI)
+platforms (e.g. Travis CI, Shippable CI); users need little
+more than a basic familiarity with shell scripts and a
+Linux distribution software environment (e.g. Debian-based
+apt-get) to get started writing Dockerfiles."
+
+https://arxiv.org/pdf/1410.0846.pdf
+
+For R packages, packrat and similar tools can be used to freeze analysis.
+
+https://rstudio.github.io/packrat/rstudio.html
+
+https://beta.rstudioconnect.com/content/2715/Up-to-Bat-with-Packrat.html
+
+https://cran.r-project.org/web/packages/miniCRAN/index.html
+
+https://cran.r-project.org/web/packages/switchr/index.html
+
+Package Info
+
+https://github.com/r-lib/sessioninfo
+
+sessioninfo::session_info()
+
+sessionInfo() 
+
+devtools::session_info()
+
+https://rpubs.com/jesuscastagnetto/caret-knn-cancer-prediction
+
+Other tools
+
+https://mran.microsoft.com/rro/#repos
+
+https://cran.r-project.org/web/packages/checkpoint/index.html
+
+https://www.rstudio.com/resources/videos/user-lightning-talks/
+
+Make
+
+https://wlandau.github.io/2016/06/14/workflow/
+
+http://opr.princeton.edu/workshops/Downloads/2017Jan_ReproducibleReasearchToolsPratt.pdf
+
+https://github.com/richfitz/remake
+
+https://github.com/wlandau/remakeInPackage
+
+## Background
+
+http://slideplayer.com/slide/2514478/
+
+http://www.baselr.org/presentations/2010/10/BaselR_-_R_Validation_in_Life_Sciences_-_Ian_Francis_-_20101013.pdf
+
+http://www.phusewiki.org/docs/RedwoodCitySDE/Operation_ValidateRMatthewDavis.pdf
+* User Defined Fuctions
+
+## Shiny
+
+https://www.user2017.brussels/uploads/useR_2017_posterV2.pdf
+
+http://onlinelibrary.wiley.com/doi/10.1002/psp4.12052/full
+
+https://isop.shinyapps.io/DoxycyclineSimulation/
+
+https://cran.r-project.org/web/packages/RxODE/vignettes/RxODE-intro.html
+
+https://user2016.sched.com/event/7GxO/r-shiny-application-for-the-evaluation-of-surrogacy-in-clinical-trials
+
+https://cran.r-project.org/web/packages/Surrogate/Surrogate.pdf
+
+https://open.fda.gov/
+
+https://openfda.shinyapps.io/LRTest/
+
+https://www.pharmasug.org/proceedings/2017/AD/PharmaSUG-2017-AD14.html#/
+
+https://statist.shinyapps.io/bioeq_en/
+
+http://onlinelibrary.wiley.com/doi/10.1002/psp4.21/abstract
+
+http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4394611/
+
+http://bmjopen.bmj.com/content/6/3/e010579
+
+http://ehdviz.dudleylab.org/help.html#introduction
+
+http://pubmedcentralcanada.ca/pmcc/articles/PMC5418887/
+
+http://labrtorian.com/2016/08/15/a-shiny-app-for-passing-bablok-and-deming-regression/
+
+https://bahar.shinyapps.io/method_compare/
+
+http://www.lexjansen.com/phuse/2016/dv/DV02.pdf
+
+http://www.phusewiki.org/docs/2017_CSS_US/PP34_Final.pdf
+
+http://www.phusewiki.org/docs/2017_SDEs/NorthChicago/Presentations/Jimmy%20Wong.pdf
+
+https://ww2.amstat.org/meetings/jsm/2017/onlineprogram/AbstractDetails.cfm?abstractid=323938
+
+http://www.phusewiki.org/docs/2017_SDES_FosterCity_Presentations/Data%20Visualization%20Applications%20Using%20R:Shiny.pdf
+
+http://www.phusewiki.org/docs/Conference%202014%20CS%20Presentations/CS05.pdf
+
+http://www.phusewiki.org/docs/CSS2015Presentations/PP26FINAL.pdf
+
+http://www.pharmasug.org/proceedings/2016/DG/PharmaSUG-2016-DG10.pdf
+
+## Use Case
+
+https://iasct.net/z_uploads/papers/48_Addition%20of%20R%20Programming%20in%20Clinical%20Domain.pdf
+
+http://onlinelibrary.wiley.com/doi/10.1002/jcph.899/pdf
+
+http://aac.asm.org/content/61/3/e02401-16.full.pdf
+
+https://www.rstudio.com/resources/customer-spotlight/astra_zeneca/
+
+http://www.pharmasug.org/proceedings/2016/DG/PharmaSUG-2016-DG10.pdf
+
+http://www.phusewiki.org/docs/CSS2015Presentations/PP26FINAL.pdf
+
+https://www.rstudio.com/resources/customer-spotlight/janssen-story/
+
+## Tool Info
+
+https://earlconf.com/downloads/sanfrancisco/presentations/earl2017_-_pioneering_r_for_clinical_development_at_amgen_-_tyler_cole.pdf
+
+http://stat545.com/block011_write-your-own-function-03.html
+
+Use testthat for formal unit tests
+
+https://shiny.rstudio.com/articles/validation.html
+
+https://shiny.rstudio.com/reference/shiny/0.11/validate.html
+
+https://cran.r-project.org/web/views/ReproducibleResearch.html
+
+https://www.slideshare.net/Zurich_R_User_Group/rinfinancegabrielfoix
+*Slide 10
+
+https://cran.r-project.org/web/packages/roxygen2/vignettes/roxygen2.html
+
+## Info
+
+R: Regulatory Compliance and Validation Issues
+A Guidance Document for the Use of R in Regulated Clinical
+Trial Environments
+
+https://www.r-project.org/doc/R-FDA.pdf
+
+Using R in a regulatory environment: FDA experiences
+
+https://channel9.msdn.com/Events/useR-international-R-User-conference/useR2016/Using-R-in-a-regulatory-environment-FDA-experiences
+
+https://www.youtube.com/watch?v=2MqVklf2sBU
+
+Using R: Perspectives of a FDA
+Statistical RevieweR
+
+http://user2007.org/program/presentations/soukup.pdf
+
+http://blog.revolutionanalytics.com/downloads/FDA-Janice-Brodsky-UseR-2012.pdf
+
+http://user2007.org/program/presentations/soukup.pdf
+
+https://www.linkedin.com/pulse/berlin-r-users-group-talk-clinical-research-eduard-parsadanyan/
+
+http://www.agilent.com/cs/library/whitepaper/public/5991-6827EN_Data_Integrity_in_Pharma_QC_Labs_Whitepaper.pdf
+
+https://www.r-project.org/conferences/useR-2007/program/presentations/soukup.pdf
+
+## Other info
+
+R and Revolution R Enterprise in regulatory environments
+
+http://www.lexjansen.com/phuse/2014/sd/SD01.pdf
+
+Validation is an essential aspect regarding the employed software in regulatory environments, in particular
+in the pharmaceutical industry. 
+
+The FDA summarizes validation as follows: “Establishing documented evidence which provides a high
+degree of assurance that a specific process will consistently produce a product meeting its predetermined
+specifications and quality attributes.” 
+
+How R is used by the FDA for regulatory compliance
+
+http://blog.revolutionanalytics.com/2017/06/r-fda.html
+
+http://www.baselr.org/presentations/2010/10/BaselR_-_R_Validation_in_Life_Sciences_-_Ian_Francis_-_20101013.pdf
+
+http://www.phusewiki.org/docs/2010/2010%20PAPERS/RG03%20Paper.pdf
+
+http://blog.revolutionanalytics.com/2009/02/using-r-in-the-pharmaceutical-industry.html
+
+http://blog.revolutionanalytics.com/2009/01/analyzing-clinical-trial-data-with-r.html
+
+http://user2007.org/program/presentations/harrell.pdf
+
+http://user2007.org/program/presentations/harrell-report.pdf
+
+https://www.amazon.com/Applied-Surrogate-Endpoint-Evaluation-Biostatistics/dp/1482249367
+
+https://twitter.com/hspter/status/748264778468974592
+
+http://www.kcrcro.com/uploads/attachments/news_pdf/EPC%20November%202016%20p18-21.pdf
+
+https://berlinrug.github.io/BerlinRUG/20151029/unfulfilled-potential-of-r-in-clinical-research/Parsadanyan_R%20in%20Clinical%20Research_fixed.pdf
+
+http://blog.revolutionanalytics.com/life-sciences/
+
+http://blog.revolutionanalytics.com/2015/08/a-short-introduction-to-bioconductor.html
+
+https://www.r-bloggers.com/lewis-rendell-what-i-learnt-at-mango-solutions/
+
+https://dataclarityconsulting.wordpress.com/2016/03/29/validated-statistical-software/
+
+https://cran.r-project.org/doc/contrib/Olszewski-R_for_biostatisticians.pdf
+
+## Reproducibility
+
+https://beta.rstudioconnect.com/content/2715/Up-to-Bat-with-Packrat.html
+
+https://beta.rstudioconnect.com/content/2976/#28
+
+## Packages
+
+http://med.stanford.edu/cisd/research/software.html
+
+https://cran.r-project.org/web/packages/randomizeR/vignettes/article.pdf
+
+https://mrclean-trial.org/home.html
+
+https://mrpredicts.shinyapps.io/RRRR/
+
+http://www.sciencedirect.com/science/article/pii/S0009912014007425
+
+https://www.r-statistics.com/2014/11/the-ensurer-package-validation-inside-pipes/
+
+http://www.onthelambda.com/2017/03/20/data-validation-with-the-assertr-package/
+
+http://www.markvanderloo.eu/yaRb/2016/03/25/easy-data-validation-with-the-validate-package/
+
+https://ec.europa.eu/eurostat/cros/system/files/1%20-%20Edit%20Rules%20Validation.pdf
+
+https://cran.r-project.org/web/packages/gsDesign/index.html
+
+https://canvasxpress.org/html/index.html
+
+## Importing Exporting Data
+
+https://cran.r-project.org/web/packages/foreign/foreign.pdf
+
+http://haven.tidyverse.org
+
+https://www.rdocumentation.org/packages/foreign/versions/0.8-69/topics/read.xport
+
+https://www.rdocumentation.org/packages/SASxport/versions/1.5.3/topics/write.xport
+
+https://mran.microsoft.com/package/SASxport/
+
+## Tools Info
+
+https://github.com/rstudio/shinytest
+
+https://github.com/rstudio/shinyloadtest
+
+https://rviews.rstudio.com/2017/06/21/analytics-administration-for-r/
+
+Haven enables R to read and write various data formats used by other statistical packages by wrapping the fantastic ReadStat C library written by Evan Miller. Haven is part of the tidyverse. Currently it supports:
+
+SAS: read_sas() reads .sas7bdat + .sas7bcat files and read_xpt() reads SAS transport files (version 5 and version 8). write_sas() writes .sas7bdat files.
+
+https://www.r-statistics.com/tag/reproducible-research/
+
+If you use R in a production environment, you have most likely experienced that some circumstances change in ways that will make your R scripts run into trouble. Many things can go wrong; package updates, external data sources, daylight savings time, etc. There is a general increasing focus on this within the R community and words like “reproducibility”, “portability” and “unit testing” are buzzing big time. Many really neat solutions are already helping a lot: RStudio’s Packrat project, Revolution Analytic’s “snapshot” feaure, and Hadley Wickham’s testthat package to name a few. Another interesting package under development is Edwin de Jonge’s “validate” package.
+
+https://cran.r-project.org/web/packages/ensurer/
+
+https://4dpiecharts.com/2015/07/03/the-state-of-assertions-in-r/
+
+## Reports & Tables
+
+https://github.com/DanniYuGithub/RTF2/
+
+https://cran.r-project.org/web/packages/ReporteRs/index.html
+
+https://cran.r-project.org/web/packages/rtf/rtf.pdf
+
+https://cran.r-project.org/web/packages/knitr/index.html
+
+https://www.latex-project.org/get/
+
+https://support.rstudio.com/hc/en-us/articles/200552056-Using-Sweave-and-knitr
+
+https://cran.r-project.org/web/packages/gridExtra/index.html
+
+https://cran.r-project.org/web/packages/summarytools/index.html
+
+https://cran.r-project.org/web/packages/stargazer/vignettes/stargazer.pdf
+
+http://biostat.mc.vanderbilt.edu/wiki/Main/Greport
+
+http://biostat.mc.vanderbilt.edu/wiki/Main/HmiscNew
+
+http://biostat.mc.vanderbilt.edu/wiki/pub/Main/StatReport/summary.pdf
+
+https://davidgohel.github.io/ReporteRs/articles/word.html
+
+https://www.r-statistics.com/2013/01/stargazer-package-for-beautiful-latex-tables-from-r-statistical-models-output/
+
+https://cran.r-project.org/web/packages/stargazer/stargazer.pdf
+
+https://www.jakeruss.com/cheatsheets/stargazer/
+
+https://www.princeton.edu/~otorres/NiceOutputR.pdf
+
+http://www.r-clinical-research.com
+
+https://cran.r-project.org/web/packages/ascii/index.html
+
+https://cran.r-project.org/web/packages/txtplot/index.html
+
+https://cran.r-project.org/web/packages/textreg/index.html
+
+https://cran.r-project.org/web/packages/broom/vignettes/broom.html
+
+http://r4ds.had.co.nz/many-models.html
+
+https://github.com/tidyverse/broom
+
+https://lsru.github.io/tv_course/lecture09_broom.html
+
+https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf
+
+https://cran.r-project.org/web/packages/xtable/vignettes/xtableGallery.pdf
+
+https://cran.r-project.org/web/packages/xtable/index.html
+
+http://rstudio.github.io/DT/
+
+https://www.bioconductor.org/packages/release/bioc/vignettes/biobroom/inst/doc/biobroom_vignette.html
+
+http://varianceexplained.org/r/broom-intro/
+
+https://www.rforge.net/doc/packages/knitr/kable.html
+
+https://haozhu233.github.io/kableExtra/awesome_table_in_pdf.pdf
+
+https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html
+
+https://sachsmc.github.io/knit-git-markr-guide/knitr/knit.html
+
+https://rpubs.com/haozhu233/kableExtra_HTML
+
+https://rpubs.com/tjmahr/prettytables_2015
+
+http://kbroman.org/knitr_knutshell/pages/figs_tables.html
+
+http://rapporter.github.io/pander/
+
+https://www.ssc.wisc.edu/sscc/pubs/RFR/RFR_DataPres.html
+
+https://www.ssc.wisc.edu/sscc/pubs/RFR/RFR_DataExpl.html
+
+http://blogs.reed.edu/ed-tech/2015/10/creating-nice-tables-using-r-markdown/
+
+https://tex.stackexchange.com/questions/253171/two-tables-not-hard-coded-side-by-side-in-latex-that-will-page-break
+
+http://blog.revolutionanalytics.com/2010/03/clinical-reporting-with-r.html
+
+http://biostat.mc.vanderbilt.edu/wiki/Main/Rreport
+
+http://biostat.mc.vanderbilt.edu/wiki/pub/Main/FHHandouts/dmcreport.pdf
+
+http://www.cse.unsw.edu.au/~mike/myrlibrary.old/RColorBrewer/html/ColorBrewer.html
+
+http://rmarkdown.rstudio.com/developer_document_templates.html
+
+## Media
+
+http://www.nytimes.com/2009/01/07/technology/business-computing/07program.html?pagewanted=1
+
+https://bits.blogs.nytimes.com/2009/01/08/r-you-ready-for-r/?mcubz=0
+
+## Docs
+
+https://www.fda.gov/iceci/inspections/inspectionguides/ucm074875.htm
+
+https://www.fda.gov/OHRMS/DOCKETS/98fr/04d-0440-gdl0002.pdf
+
+https://www.fda.gov/ScienceResearch/SpecialTopics/RunningClinicalTrials/GuidancesInformationSheetsandNotices/default.htm
+
+https://www.fda.gov/ohrms/dockets/98fr/5667fnl.pdf
+
+## 3rd party products & services
+
+http://www.mango-solutions.com/wp/products-services/products/validr/
+
+https://www.mango-solutions.com/data-science/products/valid-r/
+
+RStudio: Regulatory Compliance and Validation Issues
+A Guidance Document for the Use of RStudio Integrated Development
+Environment (IDE) Commercial Products in Regulated Clinical Trial
+Environments
+
+https://www.rstudio.com/wp-content/uploads/2014/06/RStudio-Commercial-IDE-Validation.pdf
+
+Shiny Server Pro: Regulatory Compliance and Validation Issues
+A Guidance Document for the Use of Shiny Server Pro in Regulated
+Clinical Trial Environments
+
+https://www.rstudio.com/wp-content/uploads/2014/06/RStudio-Shiny-Server-Pro-Validation.pdf
+
+http://web.warwick.ac.uk/statsdept/useR-2011/abstracts/030411-cookian.pdf
+
+http://www.londonr.org/download/?id=81
+
+http://www.lexjansen.com/phuse/2014/sd/SD01.pdf
+
+http://blog.revolutionanalytics.com/2012/06/fda-r-ok.html
+
+www.londonr.org/download/?id=81
+
+https://www.rudraya.com
+
+https://support.rstudio.com/hc/en-us/articles/217800998-What-is-your-experience-deploying-RStudio-products-in-a-regulated-clinical-trial-or-validated-environment-
+
+https://www.mango-solutions.com/data-science/products/valid-r/
+
+http://www.rmanchester.org/presentations/2016/08/ManchesterR_-_The_Challenges_of_Validating_R_-_Chris_Campbell_-_20160831.pdf
+
+http://www.lexjansen.com/phuse/2016/ad/AD12.pdf
