@@ -13,11 +13,54 @@ output:
 
 Below is a list of resources on using R in regulated clinical trial environments...Below some of the links is a comment or note that I thought was interesting...Feel free to send me any I may have missed.
 
+The key document is here:
+
 https://www.r-project.org/doc/R-FDA.pdf
 
-"The tests are located in the “tests” sub-directory of the extracted source code tarball. A README file is also available in that directory to describe the procedures to run the tests and various options related to selecting all tests or only a subset of the tests to run. The source code and expected results for these tests are available for review and use in other applications as may be appropriate.""
+The following presents a hirearchy to understand testing and validation for R and R packages.
 
-Here is an example:
+1. R Core + Base and Recommended Packages
+
+The source for R includes 3 things: R source code, a set of base packages, and a set of recommended packages.
+
+The source for R and the R base packages are maintained by a closed group of developers called the R core team. The recommended packages are maintained by the same group and other select contributors.
+
+All 3 components follow the release and testing cycle outlined here: https://www.r-project.org/doc/R-FDA.pdf
+
+Specifically, the /tests directory of the R source includes tests for R core, the base packages, and the recommended packages: https://svn.r-project.org/R/branches/R-3-4-branch/tests/
+
+You can navigate up the URL directory to see the /test folder for different  branches of R, eg  https://svn.r-project.org/R/branches
+
+2. CRAN Checks on Community Packages
+
+In addition to the base and recommended packages, R developers can make use of an extensive set of community-built packages hosted on CRAN. Any package accepted on CRAN must pass a series of automated tests: https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Checking-packages which enforce the CRAN submission policies: https://cran.r-project.org/web/packages/policies.html
+
+The results of these tests are available on CRAN for each package: http://cran.us.r-project.org/web/checks/check_summary_by_package.html#summary_by_package
+
+The same tests can be run locally against any package source tar file using a command like: R CMD check package_0.1.tar.gz
+
+The actual test code is part of R itself, not part of the package being tested. 
+
+CRAN check are run for the package plus the latest release of R, patch releases, and the current development branch of R. The tests are run on a variety of operating systems including Linux, Windows, and Mac OS.
+
+3. Community Packages + Developer Contributed Unit Tests
+
+In addition to the CRAN checks, many package authors have added their own tests which help ensure the package's functions work as intended. Most often, these tests are built into the package in a specific way so that whenever the automatic CRAN checks are run the custom tests also run.
+
+These additional tests are part of the package source. 
+
+More information: http://r-pkgs.had.co.nz/tests.html#test-cran
+
+4.  The Environment
+
+As mentioned, CRAN tests packages across a matrix of R versions and operating systems. However, ideally the tests are run again for the specific, targeted validated environment. This process would include:
+
+1. Building R from source in the validated environment. Running the tests as described in Part 1.
+2. For each community R package, download the package source into the validated environment and then run R CMD check. Once complete, install the package.
+
+It is NOT recommended that steps 1 and 2 happen while an analysis is developed, as both steps would introduce a burden for R developers. It is sufficient to complete the process at the end of an analysis while preparing for a submission or for "freezing" the production environment.
+
+Further info: 
 
 https://github.com/tidyverse/ggplot2/tree/master/tests
 
@@ -31,7 +74,7 @@ https://github.com/rOpenHealth/openfda/tree/master/tests/testthat
 
 https://github.com/hadley/testthat
 
-You can also find CRAN package check results for packages.
+You can also find CRAN package check results for packages as explained above.
 
 You can find published checks/tests by package, and the link to the tests results is found on the package’s main page in CRAN. 
 
@@ -41,9 +84,15 @@ http://cran.us.r-project.org/web/checks/check_results_dplyr.html
 
 The link above shows timing. 
 
-If they want to know what tests are performed, you can find that here:
+To know what tests are performed, you can find that here:
 
 http://r-pkgs.had.co.nz/check.html
+
+For packages, CRAN runs test on multiple OS versions, it links to the results of the checks for each, here is the one for Debian GCC:
+
+https://www.r-project.org/nosvn/R.check/r-devel-linux-x86_64-debian-clang/dplyr-00check.html
+
+The link is on the Status column. Those are the results of CRAN itself running the R CMD check in Hadley’s book - http://r-pkgs.had.co.nz/check.html.
 
 ## Landscape of Architecture
 
