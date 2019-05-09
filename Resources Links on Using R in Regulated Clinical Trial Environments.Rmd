@@ -13,6 +13,48 @@ output:
 
 Below is a list of resources on using R in regulated clinical trial environments...Below some of the links is a comment or note that I thought was interesting...Feel free to send me any I may have missed.
 
+5/9/2019 Update:
+
+Much of this information is now in the appendix of this doc:
+
+How do I select an R package for my clinical workflow?
+
+Paper: 
+https://www.phusewiki.org/docs/2019%20US%20Connect%20Final%20Papers/TT/how-do-i-pick-an-r-package-for-my-clinical-workflow-bowsher-lopp-20454.pdf
+
+Slides:
+https://www.phusewiki.org/docs/2019%20US%20Connect%20Final%20Papers/Presentations/US-Connect-Baltimore-2019-Presentations%20combined/PR_TT11.pdf
+
+Repo:
+https://github.com/philbowsher/phuse-2019-r-packages
+
+Best Practices for Reproducible Package Management in R
+
+Paper:
+https://www.phusewiki.org/docs/2019%20US%20Connect%20Final%20Papers/AB/ab09-20245.pdf
+
+Updated information on environments can be found here:
+
+http://environments.rstudio.com/
+
+These pages are helpful:
+
+https://cran.r-project.org/web/views/ClinicalTrials.html
+
+https://cran.r-project.org/web/views/ReproducibleResearch.html
+
+For Tables, check out this package:
+
+https://github.com/rstudio/GT/
+
+If you are interest in validation, keep updated with this group:
+
+https://www.pharmar.org/
+
+Also see the R in Pharma conference:
+
+http://rinpharma.com/
+
 The key document is here:
 
 https://www.r-project.org/doc/R-FDA.pdf
